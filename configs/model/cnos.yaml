@@ -1,0 +1,19 @@
+_target_: model.cnos.CNOS
+opts:
+  _target_:  model.config.CNOSOpts
+  crop_size: [280, 280]
+  crop_rel_pad: 0.05
+  matching_model_name: dinov2_vitl14
+  aggregation_function: avg5
+  min_box_size: 0.05 # relative to image size
+  min_mask_size: 3e-4 # relative to image size
+segmentation_model:
+  _target_:  utils.fastsam_util.FastSAM
+  opts:
+    _target_:  model.config.FastSAMOpts
+    model_path: ${machine.root_dir}/checkpoints/FastSAM-x.pt
+    iou_threshold: 0.9
+    conf_threshold: 0.25 # this is the confidence threshold of FastSAM, not CNOS
+    max_det: 200
+    im_width_size: 640
+    verbose: false

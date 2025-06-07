@@ -1,0 +1,18 @@
+defaults:
+  - /model/onboarding@onboarding
+  - /model/cnos@cnos
+  - /model/foundpose@foundpose
+  - /model/gotrack@gotrack
+
+use_default_detections: false
+fast_pose_estimation: false # FoundPose only retrieves 1 template and does not run PnP
+
+# Processing options for all stages
+crop_size: [280, 280]
+crop_rel_pad: 0.05
+
+# Option for detection stage
+detection2d_score_threshold: 0.25
+
+# Option for refinement stage
+num_iterations_refinement: 1

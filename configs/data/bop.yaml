@@ -1,0 +1,5 @@
+dataloader:
+  _target_: dataloader.bop.BopDataset
+  root_dir: ${machine.root_dir}/bop_datasets/
+  dataset_name:
+  coarse_pose_method:

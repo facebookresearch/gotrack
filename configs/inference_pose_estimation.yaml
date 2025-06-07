@@ -1,0 +1,13 @@
+defaults:
+  - user: default
+  - machine: local
+  - callback: base
+  - data: bop
+  - model: all
+  - _self_
+
+save_dir: ${machine.root_dir}/results/${name_exp}
+mode: # localization, detection
+name_exp: inference_pose_pipeline
+debug: true
+dataset_name:

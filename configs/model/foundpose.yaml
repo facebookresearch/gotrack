@@ -1,0 +1,13 @@
+_target_: model.foundpose.FoundPose
+opts:
+  _target_:  model.config.FoundPoseOpts
+  crop_size: [280, 280]
+  crop_rel_pad: 0.05
+  grid_cell_size: 14
+  match_template_type: tfidf
+  match_top_n_templates: 5
+  match_feat_matching_type: cyclic_buddies
+  match_top_k_buddies: 300
+  pnp_type: opencv
+  pnp_ransac_iter: 400
+  pnp_inlier_thresh: 10.0

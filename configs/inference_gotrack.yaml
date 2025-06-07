@@ -1,0 +1,19 @@
+defaults:
+  - user: default
+  - machine: local
+  - callback: base
+  - data: bop
+  - model: gotrack
+  - _self_
+
+save_dir: ${machine.root_dir}/results/${name_exp}
+mode: pose_refinement
+name_exp: inference_gotrack
+
+# Pose refinement
+dataset_name:
+coarse_pose_method:
+
+# Pose tracking
+object_name:
+sequence_name:

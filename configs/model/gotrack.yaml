@@ -1,0 +1,37 @@
+_target_: model.gotrack.GoTrack
+opts:
+  _target_:  model.config.GoTrackOpts
+  num_iterations_train: 1
+  num_iterations_test: 5
+  crop_size: [280, 280]
+  background_type: gray
+  backbone_name: dinov2_vits14-reg
+  decoder_opts:
+    _target_:  model.blocks.config.DecoderOpts
+    patch_size: 14
+    enc_embed_dim: 384
+    dec_embed_dim: 768
+    dec_depth: 12
+    dec_num_heads: 12
+    mlp_ratio: 4
+    norm_im2_in_dec: true
+    act_layer_name: relu
+    norm_layer_name: layernorm
+  head_opts:
+    _target_:  model.heads.dpt.config.DPTHeadOpts
+    dec_embed_dim: 768
+    hooks:
+      - 2
+      - 5
+      - 8
+      - 11
+    process_dims:
+      - 96
+      - 192
+      - 384
+      - 768
+    proj_dim: 256
+    head_hidden_dims:
+      - 64
+      - 256
+checkpoint_path: ${machine.root_dir}/checkpoints/gotrack_checkpoint.pt
