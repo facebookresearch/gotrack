@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center" style="font-size: 15px;"> GoTrack: Generic 6DoF Object Pose Refinement and Tracking</h1>
+  <h2 align="center"> GoTrack: Generic 6DoF Object Pose Refinement and Tracking</h2>
   <p align="center">
     <a href="https://nv-nguyen.github.io/">Van Nguyen Nguyen</a>
     ·
