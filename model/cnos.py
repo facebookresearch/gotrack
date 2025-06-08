@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -120,9 +121,9 @@ class CNOS(base.ModelBase):
         self, scene_observation: structs.SceneObservation
     ) -> structs.Collection:
         """Get detection proposals from the segmentation model."""
-        assert isinstance(
-            scene_observation, structs.SceneObservation
-        ), f"Expected type SceneObservation, got {type(scene_observation)}"
+        assert isinstance(scene_observation, structs.SceneObservation), (
+            f"Expected type SceneObservation, got {type(scene_observation)}"
+        )
         proposals = self.segmentation_model.generate_detection_proposals(
             scene_observation.image
         )
@@ -143,9 +144,9 @@ class CNOS(base.ModelBase):
         scene_observation: structs.SceneObservation,
         batch_idx: Optional[int] = None,
     ) -> Dict[str, Union[structs.CameraModel, structs.Collection]]:
-        assert isinstance(
-            scene_observation, structs.SceneObservation
-        ), f"Expected type SceneObservation, got {type(scene_observation)}"
+        assert isinstance(scene_observation, structs.SceneObservation), (
+            f"Expected type SceneObservation, got {type(scene_observation)}"
+        )
         if not self.cnos_is_set:
             self.set_device()
 

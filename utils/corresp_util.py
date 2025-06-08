@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -281,9 +282,9 @@ def poses_from_flows(
         weight_threshold=weight_threshold,
     )
     for key in ["estimated_poses", "quality", "proj_err"]:
-        assert (
-            output_dict[key].shape[0] == batch_size
-        ), f"{key} has different size, {output_dict[key].shape[0]} vs batch_size={batch_size}."
+        assert output_dict[key].shape[0] == batch_size, (
+            f"{key} has different size, {output_dict[key].shape[0]} vs batch_size={batch_size}."
+        )
     return (
         torch.as_tensor(output_dict["estimated_poses"]),
         torch.as_tensor(output_dict["quality"]),

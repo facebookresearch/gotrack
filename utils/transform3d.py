@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -593,9 +594,9 @@ def get_3d_points_from_depth(
         3d_points: 3D points [batch_size, height, width, 3] in camera coordinates.
     """
     (batch_size, height, width) = depths.shape
-    assert (
-        depths.device == intrinsics.device
-    ), "Depth and intrinsics must be on the same device."
+    assert depths.device == intrinsics.device, (
+        "Depth and intrinsics must be on the same device."
+    )
 
     # Get the homogeneous points if not provided.
     homogeneous_pixels = homogeneous_pixel_grid(width, height)

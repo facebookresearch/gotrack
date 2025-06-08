@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -39,7 +40,6 @@ class FastSAM(YOLO):
         self.segmentor = yolo.v8.segment.SegmentationPredictor(
             overrides=overrides_params, _callbacks=self.callbacks
         )
-        
 
     def set_device(self, device: torch.device, verbose=False):
         """Initialize YOLO model with given parameters and set it to evaluation mode."""

@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -149,9 +150,9 @@ class RoPE2D(torch.nn.Module):
         """
         d_model = tokens.size(3)
         assert d_model % 2 == 0, "d_model should be a multiple of two"
-        assert (
-            positions.ndim == 3 and positions.shape[-1] == 2
-        ), "positions should have shape (batch, ntokens, 2)"
+        assert positions.ndim == 3 and positions.shape[-1] == 2, (
+            "positions should have shape (batch, ntokens, 2)"
+        )
 
         # Get positional encoding.
         max_len = int(positions.max()) + 1

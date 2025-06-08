@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -363,9 +364,9 @@ class DinoFeatureExtractor(nn.Module):
             return model
 
         stride = nn_utils._pair(stride)
-        assert all(
-            (patch_size // s_) * s_ == patch_size for s_ in stride
-        ), f"stride {stride} should divide patch_size {patch_size}"
+        assert all((patch_size // s_) * s_ == patch_size for s_ in stride), (
+            f"stride {stride} should divide patch_size {patch_size}"
+        )
 
         # Fix the stride.
         model.patch_embed.proj.stride = stride

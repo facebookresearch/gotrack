@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -705,10 +706,10 @@ class Collection:
         """
         data_len = len(value)
         if len(self._fields):
-            assert (
-                len(self) == data_len
-            ), "Adding a field {} of length {} to a Collection of length {}".format(
-                name, data_len, len(self)
+            assert len(self) == data_len, (
+                "Adding a field {} of length {} to a Collection of length {}".format(
+                    name, data_len, len(self)
+                )
             )
         self._fields[name] = value
 

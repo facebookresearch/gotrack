@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -332,12 +333,12 @@ class GoTrack(base.ModelBase):
                 logger.info(f"GoTrack: - Pose scores: {scores_display}")
 
             # Keep intermediate results for visualization.
-            outputs[
-                f"{prefix}_pred_poses_crop_cam_from_model"
-            ] = pred_poses_crop_cam_from_model
-            outputs[
-                f"{prefix}_pred_poses_orig_cam_from_model"
-            ] = pred_poses_orig_cam_from_model
+            outputs[f"{prefix}_pred_poses_crop_cam_from_model"] = (
+                pred_poses_crop_cam_from_model
+            )
+            outputs[f"{prefix}_pred_poses_orig_cam_from_model"] = (
+                pred_poses_orig_cam_from_model
+            )
             outputs[f"{prefix}_pose_fitting_tiles"] = pred_pose_fitting_tiles
 
             if iter_idx < num_iters - 1:
@@ -375,9 +376,9 @@ class GoTrack(base.ModelBase):
         run_times = inputs["images"].times + outputs["run_time"]
 
         # Save the prediction.
-        assert len(outputs["objects"]) == len(
-            inputs["objects"]
-        ), "The number of objects in the prediction and input should be the same."
+        assert len(outputs["objects"]) == len(inputs["objects"]), (
+            "The number of objects in the prediction and input should be the same."
+        )
         # In case there are multiple frames in batch, frame_ids is mapping obj_id to (scene_id, im_id)
         assert self.result_dir is not None, "Result directory is not set."
         misc.save_per_frame_prediction(

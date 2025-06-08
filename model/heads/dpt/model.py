@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -42,9 +43,9 @@ class DPTHead(nn.Module):
     ) -> None:
         super().__init__()
         self.opts = opts
-        assert len(self.opts.process_dims) == len(
-            self.opts.hooks
-        ), "Mismatch in number of input features and dimension of the output features"
+        assert len(self.opts.process_dims) == len(self.opts.hooks), (
+            "Mismatch in number of input features and dimension of the output features"
+        )
 
         # Create processing layers.
         self.process_layers: nn.ModuleList = create_processing_blocks(

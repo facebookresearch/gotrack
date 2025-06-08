@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -428,9 +429,9 @@ def poses_from_correspondences(  # noqa: C901
 
         else:
             raise ValueError(f"Unknown PnP type {pnp_solver_name}")
-    assert (
-        len(outputs["estimated_poses"]) == batch_size
-    ), f"{len(outputs['estimated_poses'])} != {batch_size}"
+    assert len(outputs["estimated_poses"]) == batch_size, (
+        f"{len(outputs['estimated_poses'])} != {batch_size}"
+    )
     for k in [
         "estimated_poses",
         "num_inliers",

@@ -50,6 +50,7 @@ Additionally, this repo supports the fisheye camera model used in the [HOT3D](ht
    - [Pose refinement](#pose-refinement)
    - [Pose estimation pipeline ](#pose-estimation-pipeline)
    - [Pose tracking ](#pose-tracking)
+- [Qualitative tracking results](#qualitative-tracking-results)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
@@ -149,11 +150,16 @@ Note that when```fast_pose_estimation=true```, the pipeline retrieves only the n
 <p align="center">
   <img src="media/qualitative_pose_pipeline.png" width=100%/>
 </p>
-</details>
+
 
 ### Pose tracking <a name="pose-tracking"></a>
 
-Pose tracking using frame-to-frame flow is currently not implemented in this repository, whereas tracking using model-to-frame flow can be added by propagating the pose estimated in the previous frame to the next frame and using it as the initial pose for refinement with the current GoTrack refiner. Below, we provide the results of pose tracking on the HOT3D and YCB-V datasets.
+Pose tracking using frame-to-frame flow is currently not implemented in this repository, whereas tracking using model-to-frame flow can be added by propagating the pose estimated in the previous frame to the next frame and using it as the initial pose for refinement with the current GoTrack refiner. 
+
+</details>
+
+
+## Qualitative tracking results <a name="qualitative-tracking-results"></a>
 
 On HOT3D dataset (Aria):
 

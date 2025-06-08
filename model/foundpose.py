@@ -1,3 +1,4 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
 #!/usr/bin/env python3
 
 # pyre-strict
@@ -68,9 +69,9 @@ class FoundPose(base.ModelBase):
                     metric=repre.template_desc_opts.tfidf_knn_metric,
                 )
                 visual_words_knn_index.fit(repre.feat_cluster_centroids)
-                self.objects_knn_repre[obj_id][
-                    "visual_words_knn_index"
-                ] = visual_words_knn_index
+                self.objects_knn_repre[obj_id]["visual_words_knn_index"] = (
+                    visual_words_knn_index
+                )
 
             # Build per-template KNN index with features from that template.
             template_knn_indices = []
@@ -86,9 +87,9 @@ class FoundPose(base.ModelBase):
                     template_knn_index.fit(template_feats.cpu())
                     template_knn_indices.append(template_knn_index)
                 logger.debug("Per-template KNN indices built.")
-            self.objects_knn_repre[obj_id][
-                "template_knn_indices"
-            ] = template_knn_indices
+            self.objects_knn_repre[obj_id]["template_knn_indices"] = (
+                template_knn_indices
+            )
         logger.info("FoundPose: onboarding processed!")
 
     def get_grid_points(self) -> torch.Tensor:
