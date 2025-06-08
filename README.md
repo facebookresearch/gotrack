@@ -16,7 +16,7 @@
   </p>
 </p>
 
-https://github.com/user-attachments/assets/dbb1e825-58ec-419c-950b-fdc88caf2745
+https://github.com/user-attachments/assets/6c8ed589-a3ac-4776-8fc1-f6a0a2759dac
 
 This is the official implementation of our work **GoTrack** which proposes an efficient and accurate CAD-based method for 6DoF pose refinement and tracking of **unseen** objects. Given a CAD model of an object, an RGB image with known intrinsics that shows the object in an unknown pose, and an initial object pose, Gotrack refines the object pose such as the 2D projection of the model aligns closely with the object’s appearance in the image.
 
@@ -49,7 +49,7 @@ Additionally, this repo supports the fisheye camera model used in the [HOT3D](ht
 - [Using GoTrack](#gotrack)
    - [Pose refinement](#pose-refinement)
    - [Pose estimation pipeline ](#pose-estimation-pipeline)
-- [Qualitative tracking results](#qualitative-tracking-results)
+   - [Pose tracking ](#pose-tracking)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
@@ -151,7 +151,9 @@ Note that when```fast_pose_estimation=true```, the pipeline retrieves only the n
 </p>
 </details>
 
-## Qualitative tracking results <a name="qualitative-tracking-results"></a>
+### Pose tracking <a name="pose-tracking"></a>
+
+Pose tracking using frame-to-frame flow is currently not implemented in this repository, whereas tracking using model-to-frame flow can be added by propagating the pose estimated in the previous frame to the next frame and using it as the initial pose for refinement with the current GoTrack refiner. Below, we provide the results of pose tracking on the HOT3D and YCB-V datasets.
 
 On HOT3D dataset (Aria):
 
