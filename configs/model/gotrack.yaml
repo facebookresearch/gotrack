@@ -34,4 +34,4 @@ opts:
     head_hidden_dims:
       - 64
       - 256
-checkpoint_path: ${machine.root_dir}/checkpoints/gotrack_checkpoint.pt
+checkpoint_path: ./gotrack_checkpoint.pt

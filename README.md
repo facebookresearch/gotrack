@@ -45,6 +45,7 @@ Additionally, this repo supports the fisheye camera model used in the [HOT3D](ht
 - [Setup](#setup)
    - [Environment](#environment)
    - [Dataset](#dataset)
+   - [Pretrained model](#pretrained-model)
    - [Dataset Directory Structure](#dataset-directory-structure)
 - [Using GoTrack](#gotrack)
    - [Pose refinement](#pose-refinement)
