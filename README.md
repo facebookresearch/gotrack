@@ -17,10 +17,6 @@
   </p>
 </p>
 
-<p align="center">
-  <img src="media/gotrack.png" width=100%/>
-</p>
-
 ##
 
 This is the official implementation of our work **GoTrack** which proposes an efficient and accurate CAD-based method for 6DoF pose refinement and tracking of **unseen** objects. Given a CAD model of an object, an RGB image with known intrinsics that shows the object in an unknown pose, and an initial object pose, Gotrack refines the object pose such as the 2D projection of the model aligns closely with the object’s appearance in the image.
@@ -28,6 +24,19 @@ This is the official implementation of our work **GoTrack** which proposes an ef
 We also incorporate two existing methods for 2D object detection and coarse pose estimation, [CNOS](https://github.com/nv-nguyen/cnos) and [FoundPose](https://github.com/facebookresearch/foundpose) (also built on top of [DINOv2](https://github.com/facebookresearch/dinov2)), respectively, to have a three-stage pose estimation pipeline. Note that the results of CNOS and FoundPose are slightly different from the original implementations, as we have simplified the setup and used consistent image resolutions and rendering settings across all three methods.
 
 Additionally, this repo supports the fisheye camera model used in the [HOT3D](https://www.projectaria.com/datasets/hot3D/) dataset.
+
+<figure align="left">
+  <img src="media/gotrack.png" width="100%" />
+  <figcaption>
+    <small><em><b>Example results of the GoTrack refiner on LM-O, YCB-V, and T-LESS datasets.</b> The input image is shown in the first column, and the template retrieved using the BoW-based approach from 
+    <a href="https://github.com/facebookresearch/foundpose">FoundPose</a> in the second. The third and fourth columns show the predictions 
+    of our GoTrack network, which can then be used to remap pixels from the template to the input image as shown in the fifth column. 
+    The last column presents the final pose estimated by PnP-RANSAC from 2D-3D correspondences (the contour of the object model in the 
+    initial pose is shown in blue, and in the estimated pose in red). As shown in the third column, our method can reliably predict which 
+    part of the object is visible, despite never seeing the object during training.</em></small>
+  </figcaption>
+</figure>
+
 
 ## Table of Contents
 
@@ -38,6 +47,7 @@ Additionally, this repo supports the fisheye camera model used in the [HOT3D](ht
 - [Using GoTrack](#gotrack)
    - [Pose refinement](#pose-refinement)
    - [Pose estimation pipeline ](#pose-estimation-pipeline)
+- [Qualitative tracking results](#qualitative-tracking-results)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
@@ -139,7 +149,20 @@ Note that when```fast_pose_estimation=true```, the pipeline retrieves only the n
 </p>
 </details>
 
+## Qualitative tracking results <a name="qualitative-tracking-results"></a>
 
+On HOT3D dataset (Aria):
+
+[![Watch the video](./media/thumbnail_hot3d_aria.png)](https://youtu.be/74NXe03ySdM)
+
+On HOT3D dataset (Quest 3):
+
+[![Watch the video](./media/thumbnail_hot3d_quest3.png)](https://youtu.be/bjQWS9vgPT0)
+
+
+On YCB-V dataset:
+
+[![Watch the video](./media/thumbnail_ycbv.png)](https://youtu.be/6B1ZOQkvxH4)
 
 ## Acknowledgements <a name="acknowledgements"></a>
 
