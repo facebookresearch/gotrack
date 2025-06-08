@@ -18,8 +18,6 @@
 
 https://github.com/user-attachments/assets/5edf6c76-2e73-40ae-9ab2-881d3614c20a
 
-##
-
 This is the official implementation of our work **GoTrack** which proposes an efficient and accurate CAD-based method for 6DoF pose refinement and tracking of **unseen** objects. Given a CAD model of an object, an RGB image with known intrinsics that shows the object in an unknown pose, and an initial object pose, Gotrack refines the object pose such as the 2D projection of the model aligns closely with the object’s appearance in the image.
 
 We also incorporate two existing methods for 2D object detection and coarse pose estimation, [CNOS](https://github.com/nv-nguyen/cnos) and [FoundPose](https://github.com/facebookresearch/foundpose) (also built on top of [DINOv2](https://github.com/facebookresearch/dinov2)), respectively, to have a three-stage pose estimation pipeline. Note that the results of CNOS and FoundPose are slightly different from the original implementations, as we have simplified the setup and used consistent image resolutions and rendering settings across all three methods.
