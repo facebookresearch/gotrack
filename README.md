@@ -7,8 +7,7 @@
     ·
     <a href="https://www.linkedin.com/in/sindi-shkodrani/">Sindi Shkodrani</a>
     ·
-    <a href="https://btekin.github.io">Bugra Tekin</a>
-    ·
+    <a href="https://btekin.github.io">Bugra Tekin</a><br />
     <a href="https://vincentlepetit.github.io/">Vincent Lepetit</a>
     ·
     <a href="https://www.linkedin.com/in/cem-keskin-23692a15">Cem Keskin</a>
