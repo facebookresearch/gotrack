@@ -25,7 +25,6 @@ We also incorporate two existing methods for 2D object detection and coarse pose
 
 Additionally, this repo supports the fisheye camera model used in the [HOT3D](https://www.projectaria.com/datasets/hot3D/) dataset.
 
-<br />
 <figure align="left">
   <img src="media/gotrack.png" width="100%" />
   <figcaption>
