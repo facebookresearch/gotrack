@@ -28,12 +28,14 @@ Additionally, this repo supports the fisheye camera model used in the [HOT3D](ht
 <figure align="left">
   <img src="media/gotrack.png" width="100%" />
   <figcaption>
-    <small><em><b>Example results of the GoTrack refiner on LM-O, YCB-V, and T-LESS datasets.</b> The input image is shown in the first column, and the template retrieved using the BoW-based approach from 
+    <p style="line-height: 1.8;">
+      <b>Example results of the GoTrack refiner on LM-O, YCB-V, and T-LESS datasets.</b> The input image is shown in the first column, and the template retrieved using the BoW-based approach from 
     <a href="https://github.com/facebookresearch/foundpose">FoundPose</a> in the second. The third and fourth columns show the predictions 
     of our GoTrack network, which can then be used to remap pixels from the template to the input image as shown in the fifth column. 
     The last column presents the final pose estimated by PnP-RANSAC from 2D-3D correspondences (the contour of the object model in the 
     initial pose is shown in blue, and in the estimated pose in red). As shown in the third column, our method can reliably predict which 
-    part of the object is visible, despite never seeing the object during training.</em></small>
+    part of the object is visible, despite never seeing the object during training.
+  </p>
   </figcaption>
 </figure>
 
