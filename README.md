@@ -28,7 +28,7 @@ Additionally, this repo supports the fisheye camera model used in the [HOT3D](ht
 <figure align="left">
   <img src="media/gotrack.png" width="100%" />
   <figcaption>
-    <p style="line-height: 1.8;">
+    <p style="line-height: 1.0; font-size: 11pt; font-style: italic;">
       <b>Example results of the GoTrack refiner on LM-O, YCB-V, and T-LESS datasets.</b> The input image is shown in the first column, and the template retrieved using the BoW-based approach from 
     <a href="https://github.com/facebookresearch/foundpose">FoundPose</a> in the second. The third and fourth columns show the predictions 
     of our GoTrack network, which can then be used to remap pixels from the template to the input image as shown in the fifth column. 
