@@ -24,17 +24,20 @@ We also incorporate two existing methods for 2D object detection and coarse pose
 
 Additionally, this repo supports the fisheye camera model used in the [HOT3D](https://www.projectaria.com/datasets/hot3D/) dataset.
 
-<figure align="left">
-  <img src="media/gotrack.png" width="100%" />
-  <figcaption>
-      <b>Example results of the GoTrack refiner on LM-O, YCB-V, and T-LESS datasets.</b> The input image is shown in the first column, and the template retrieved using the BoW-based approach from 
-    <a href="https://github.com/facebookresearch/foundpose">FoundPose</a> in the second. The third and fourth columns show the predictions 
-    of our GoTrack network, which can then be used to remap pixels from the template to the input image as shown in the fifth column. 
-    The last column presents the final pose estimated by PnP-RANSAC from 2D-3D correspondences (the contour of the object model in the 
-    initial pose is shown in blue, and in the estimated pose in red). As shown in the third column, our method can reliably predict which 
-    part of the object is visible, despite never seeing the object during training.
-  </figcaption>
-</figure>
+<div style="border:1px solid #ccc; padding:10px; border-radius:8px; width:100%; max-width:800px;">
+  <img src="media/gotrack.png" style="width:100%; display:block; margin-bottom:8px;" />
+  <div style="font-size:12px">
+    <b>Example results of the GoTrack refiner on LM-O, YCB-V, and T-LESS datasets.</b>
+    The input image is shown in the first column, and the template retrieved using the BoW-based approach from
+    <a href="https://github.com/facebookresearch/foundpose">FoundPose</a> in the second.
+    The third and fourth columns show the predictions of our GoTrack network, which can then be used to remap pixels
+    from the template to the input image as shown in the fifth column. The last column presents the final pose estimated
+    by PnP-RANSAC from 2D-3D correspondences (the contour of the object model in the initial pose is shown in blue, and
+    in the estimated pose in red). As shown in the third column, our method can reliably predict which part of the object
+    is visible, despite never seeing the object during training.
+  </div>
+</div>
+
 
 
 ## Table of Contents
@@ -152,16 +155,16 @@ Note that when```fast_pose_estimation=true```, the pipeline retrieves only the n
 
 On HOT3D dataset (Aria):
 
-[![Watch the video](./media/thumbnail_hot3d_aria.png)](https://youtu.be/74NXe03ySdM)
+https://github.com/user-attachments/assets/666834fd-f18a-4acf-adc1-919f3431e3ba
 
 On HOT3D dataset (Quest 3):
 
-[![Watch the video](./media/thumbnail_hot3d_quest3.png)](https://youtu.be/bjQWS9vgPT0)
+https://github.com/user-attachments/assets/73eb4d66-b52f-441a-93d4-41126129ae55
 
 
 On YCB-V dataset:
 
-[![Watch the video](./media/thumbnail_ycbv.png)](https://youtu.be/6B1ZOQkvxH4)
+https://github.com/user-attachments/assets/4dffc61b-56e8-4723-af15-2ec139f91749
 
 
 ## Acknowledgements <a name="acknowledgements"></a>
