@@ -164,13 +164,6 @@ On YCB-V dataset:
 
 [![Watch the video](./media/thumbnail_ycbv.png)](https://youtu.be/6B1ZOQkvxH4)
 
-<div align="center">
-  <a href="https://youtu.be/6B1ZOQkvxH4" style="display: inline-block; position: relative;">
-    <img src="https://img.youtube.com/vi/6B1ZOQkvxH4/maxresdefault.jpg" alt="Watch the video" />
-    <img src="https://i.imgur.com/3h2c4S6.png" alt="Play" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; opacity: 0.8; transition: opacity 0.2s;" />
-  </a>
-</div>
-
 ## Acknowledgements <a name="acknowledgements"></a>
 
 If you find this work useful in your research, please cite
