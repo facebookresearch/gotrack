@@ -16,9 +16,8 @@
   </p>
 </p>
 
-<h3 align="center">
-  <a href="https://arxiv.org/abs/2506.07155" align="center">Arxiv</a>
-</h3>
+<a href="https://arxiv.org/abs/2506.07155"><img 
+src="https://img.shields.io/badge/-Paper-blue.svg?colorA=333&logo=arxiv" height=28em></a>
 
 https://github.com/user-attachments/assets/6c8ed589-a3ac-4776-8fc1-f6a0a2759dac
 
