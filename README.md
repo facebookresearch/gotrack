@@ -1,6 +1,6 @@
-<p align="center">
-  <h2 align="center"> GoTrack: Generic 6DoF Object Pose Refinement and Tracking</h2>
-  <p align="center">
+<div align="center">
+  <h2>GoTrack: Generic 6DoF Object Pose Refinement and Tracking</h2>
+  <p>
     <a href="https://nv-nguyen.github.io/">Van Nguyen Nguyen</a>
     ·
     <a href="https://www.cforster.ch">Christian Forster</a>
@@ -14,10 +14,10 @@
     ·
     <a href="https://thodan.github.io/">Tomas Hodan</a>
   </p>
-</p>
-
-<a href="https://arxiv.org/abs/2506.07155"><img 
-src="https://img.shields.io/badge/-Paper-blue.svg?colorA=333&logo=arxiv" height=28em></a>
+  <a href="https://arxiv.org/abs/2506.07155">
+    <img src="https://img.shields.io/badge/-Paper-blue.svg?colorA=333&logo=arxiv" height="28em">
+  </a>
+</div>
 
 https://github.com/user-attachments/assets/6c8ed589-a3ac-4776-8fc1-f6a0a2759dac
 
