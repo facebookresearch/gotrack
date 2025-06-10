@@ -16,6 +16,10 @@
   </p>
 </p>
 
+<h3 align="center">
+  <a href="https://arxiv.org/abs/2506.07155" align="center">Arxiv</a>
+</h3>
+
 https://github.com/user-attachments/assets/6c8ed589-a3ac-4776-8fc1-f6a0a2759dac
 
 This is the official implementation of our work **GoTrack** which proposes an efficient and accurate CAD-based method for 6DoF pose refinement and tracking of **unseen** objects. Given a CAD model of an object, an RGB image with known intrinsics that shows the object in an unknown pose, and an initial object pose, Gotrack refines the object pose such as the 2D projection of the model aligns closely with the object’s appearance in the image.
