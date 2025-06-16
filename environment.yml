@@ -27,6 +27,8 @@ dependencies:
   - vispy=0.12.1
   - einops
   - distinctipy
+  - trimesh
+  - huggingface-hub
   - pip:
     - cython==3.0.10
     - ultralytics==8.0.135
